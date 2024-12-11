@@ -1,5 +1,5 @@
-import { Meteor } from 'meteor/meteor';
-import { Tasks } from './tasks';
+import { Meteor } from "meteor/meteor";
+import { Tasks } from "./tasks";
 
 /**
  Finds tasks belonging to the logged-in user.
@@ -10,4 +10,4 @@ function findTasksByLoggedUser() {
   return Tasks.find({ userId: Meteor.userId() });
 }
 
-Meteor.publish('tasksByLoggedUser', findTasksByLoggedUser);
+Meteor.publish("tasksByLoggedUser", findTasksByLoggedUser);
